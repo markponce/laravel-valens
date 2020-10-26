@@ -1,0 +1,18 @@
+
+
+.body-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: #eeeeee;
+}
+
+header h1 {
+  text-align:  center;
+  color: #656565;
+}
+
+

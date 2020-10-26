@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\PaintJobController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     $colors = DB::table('colors')->get();
+//     return view('add');
+// });
+
+Route::get('/', [PaintJobController::class, 'create']);
+Route::post('/', [PaintJobController::class, 'store']);
+Route::get('/paint-jobs', [PaintJobController::class, 'index']);
+Route::get('/paint-jobs/{id}', [PaintJobController::class, 'update']);
+
+
+
+
